@@ -10,17 +10,17 @@ var myAppBar = AppBar(
 
 var myDrawer = Drawer(
   backgroundColor: Colors.white,
-  child: Column(children: [
-    SizedBox(height: 10,),
-    
+  child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
     ListTile(
       title: Text(
         "Browse",
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
-       onTap: () => print("GreenMusk"),
+      onTap: () => print("GreenMusk"),
     ),
-    SizedBox(height: 10,),
+    SizedBox(
+      height: 10,
+    ),
     ListTile(
       title: Text(
         "Your Profile",
@@ -28,7 +28,9 @@ var myDrawer = Drawer(
       ),
       onTap: () => print("GreenMusk"),
     ),
-    SizedBox(height: 10,),
+    SizedBox(
+      height: 10,
+    ),
     ListTile(
       title: Text(
         "Community",
@@ -36,7 +38,9 @@ var myDrawer = Drawer(
       ),
       onTap: () => print("GreenMusk"),
     ),
-    SizedBox(height: 10,),
+    SizedBox(
+      height: 10,
+    ),
     ListTile(
       title: Text(
         "Jobs",
@@ -44,7 +48,9 @@ var myDrawer = Drawer(
       ),
       onTap: () => print("GreenMusk"),
     ),
-    SizedBox(height: 10,),
+    SizedBox(
+      height: 10,
+    ),
     ListTile(
       title: Text(
         "More",
@@ -52,7 +58,7 @@ var myDrawer = Drawer(
       ),
       onTap: () => print("GreenMusk"),
     ),
-    SizedBox(height: 150,),
+    Spacer(),
     ListTile(
       title: Text(
         "Log Out",
