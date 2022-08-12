@@ -19,38 +19,35 @@ class bar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return Column(
       children: [
-        Row(
-          children: [
-            Flexible(
-              flex: 1,
-              child: TextField(
-                cursorColor: Colors.grey,
-                decoration: InputDecoration(
-                    fillColor: Colors.white,
-                    filled: true,
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide.none),
-                    hintText: 'Search',
-                    hintStyle: TextStyle(color: Colors.grey, fontSize: 18),
-                    prefixIcon: Container(
-                      padding: EdgeInsets.all(15),
-                      child: Icon(Icons.search),
-                      width: 18,
-                    )),
+        Container(
+          width: width / 2.3,
+          child: Row(
+            children: [
+              Flexible(
+                flex: 1,
+                child: TextField(
+                  cursorColor: Colors.grey,
+                  decoration: InputDecoration(
+                      fillColor: Colors.grey[100],
+                      filled: true,
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          borderSide: BorderSide.none),
+                      hintText: 'Search',
+                      hintStyle: TextStyle(color: Colors.grey, fontSize: 18),
+                      prefixIcon: Container(
+                        padding: EdgeInsets.all(15),
+                        child: Icon(Icons.search),
+                        width: 18,
+                      )),
+                ),
               ),
-            ),
-            Container(
-                margin: EdgeInsets.only(left: 10),
-                padding: EdgeInsets.all(15),
-                decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    borderRadius: BorderRadius.circular(15)),
-                child: Icon(Icons.search),
-                width: 25),
-          ],
+            ],
+          ),
         )
       ],
     );

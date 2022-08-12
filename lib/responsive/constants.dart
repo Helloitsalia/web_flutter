@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
-var myDefaultBackground = Colors.white10;
+var myDefaultBackground = Colors.white;
 
 var myAppBar = AppBar(
   backgroundColor: Colors.white,
   bottomOpacity: 0.0,
   elevation: 0.0,
+  
 );
 
 var myDrawer = Drawer(
